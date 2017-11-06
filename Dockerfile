@@ -1,3 +1,3 @@
-FROM ubuntu:16.06
+FROM ubuntu:16.04
 
 RUN apt-get update -y && apt-get install -y curl
