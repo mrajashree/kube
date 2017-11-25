@@ -1,3 +1,4 @@
-FROM ubuntu:16.04
+FROM golang:latest 
 
-RUN apt-get update -y && apt-get install -y curl
+COPY kube /
+CMD ["/kube"]
