@@ -5,4 +5,4 @@ Once dockerhub account is linked to Github, select a repo for automated builds a
 git push will create a new dockerhub tag for that repo.
 Add webhook to that dockerhub image/repo
 
-Trying building stable image
+Trying building stable image - 2
