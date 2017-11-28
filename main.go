@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
+
+func callHelloWorld(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello old world!")
+}
 
 func main() {
-	fmt.Print("\nHi, this is the latest version\n")
+	http.HandleFunc("/", callHelloWorld)
+	err := http.ListenAndServe(":9001", nil)
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }
