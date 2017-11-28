@@ -1,3 +1,7 @@
-FROM debian:jessie
+FROM golang:latest 
 
-RUN apt-get update -y && apt-get install -y curl
+RUN mkdir /app 
+ADD . /app/ 
+WORKDIR /app 
+RUN go build -o kube . 
+CMD ["/app/kube"]
