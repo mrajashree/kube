@@ -17,12 +17,3 @@ func main() {
 		log.Fatal("ListenAndServe: ", err)
 	}
 }
-
-
-//FROM golang:alpine
-//
-//RUN mkdir /app
-//ADD . /app/
-//WORKDIR /app
-//RUN go build -o kube .
-//CMD ["/app/kube"]
