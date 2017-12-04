@@ -7,7 +7,7 @@ import (
 )
 
 func callHelloWorld(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "This is an older release!")
+	fmt.Fprintf(w, "This is to test docker build time!")
 }
 
 func main() {
@@ -17,3 +17,12 @@ func main() {
 		log.Fatal("ListenAndServe: ", err)
 	}
 }
+
+
+//FROM golang:alpine
+//
+//RUN mkdir /app
+//ADD . /app/
+//WORKDIR /app
+//RUN go build -o kube .
+//CMD ["/app/kube"]

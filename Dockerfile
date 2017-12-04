@@ -1,7 +1,4 @@
-FROM golang:alpine
+FROM scratch
 
-RUN mkdir /app 
-ADD . /app/ 
-WORKDIR /app 
-RUN go build -o kube . 
-CMD ["/app/kube"]
+COPY kube .
+CMD["/kube"]
