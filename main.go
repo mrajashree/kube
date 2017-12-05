@@ -7,7 +7,7 @@ import (
 )
 
 func callHelloWorld(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "This is to test docker build time!")
+	fmt.Fprintf(w, "This is kubecon!")
 }
 
 func main() {
