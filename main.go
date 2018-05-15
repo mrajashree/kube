@@ -7,7 +7,7 @@ import (
 )
 
 func callHelloWorld(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello kubecon people!!!!")
+	fmt.Fprintf(w, "Welcom to k8s meetup!!!")
 }
 
 func main() {
